@@ -1,0 +1,17 @@
+h1{
+    background: grey;
+}
+label{
+    text-decoration: black;
+    font-weight: bold;
+}
+
+form{
+    border-radius: 25px;
+    padding: 20px; 
+}
+
+select
+{
+    width: 400px;
+}
