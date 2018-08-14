@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>I'm jumbled</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body >
+    <div class="container">
+        <h3>Can you help me Out. I messed up sequence of a Sentance</h3>
+    </div>
+    <div class="container hi border border-dark">
+        <button class="btn btn-light" id="word1" onclick="disableMe(this)">The </button>
+        <button class="btn btn-light" id="word2" onclick="disableMe(this)">the </button>
+        <button class="btn btn-light" id="word3" onclick="disableMe(this)">jumps </button>
+        <button class="btn btn-light" id="word4" onclick="disableMe(this)">dog</button>
+        <button class="btn btn-light" id="word5" onclick="disableMe(this)">fox </button>
+        <button class="btn btn-light" id="word6" onclick="disableMe(this)">brown </button>
+        <button class="btn btn-light" id="word7" onclick="disableMe(this)">over </button>
+        <button class="btn btn-light" id="word8" onclick="disableMe(this)">quick </button>
+        <button class="btn btn-light" id="word9" onclick="disableMe(this)">lazy </button>
+    </div>
+    <div class="container hi border border-dark form-group">
+        <input type="text" id="textInput" readonly class="form-control">
+        <button class="btn btn-outline-success btn-check" onclick="checkString()"> Check it </button>
+        <button class="btn btn-outline-danger btn-check" onclick="reset()"> Reset </button>        
+    </div>
+</body>
+
+</html>

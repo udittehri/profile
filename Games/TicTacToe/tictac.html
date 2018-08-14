@@ -1,0 +1,233 @@
+<html>
+<meta name="viewport" content="width = device-width, initial-scale = 1.0 shrink-to-fit = no">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115176882-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-115176882-1');
+</script>
+
+<style type="text/css">	
+	button{
+		height: 70px;
+		width: 70px;
+		margin: 3%;
+		border-color: black;
+        font-size: 3em;
+	}
+
+    body{
+        background: #E8E7E7;
+        box-sizing: content-box;
+        alig/*n-items: center;
+        align-content: center;
+        position: absolute;*/
+        top: 3%;       
+    }
+
+    footer{
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+    .wrapper{
+        text-align: center;
+    }
+
+
+</style>
+	<title>	Tic Tac Toe </title>
+</head>
+
+<body >
+    <div style="text-align: center ">
+        <h2>TIC TAC TOE</h2>
+    </div>
+ 	<div style=" margin-top:15%; background: #F3F3F3; margin: auto;">
+        <!-- <div class="container" id="hope"> -->
+            <h1 id = won></h1>
+        <div style="width:400px ; margin: auto; background: #F3F3F3; padding: 10px" class="wrapper">
+            <br>
+           	<button id = '0' onClick="getInput(this.id)">&nbsp;</button> 
+            <button id = "1" onClick="getInput(this.id)">&nbsp; </button>
+            <button id = "2" onClick="getInput(this.id)">&nbsp; </button>
+                <br>
+            <button id = '3' onClick="getInput(this.id)">&nbsp; </button>
+            <button id = "4" onClick="getInput(this.id)">&nbsp; </button>
+            <button id = "5" onClick="getInput(this.id)">&nbsp; </button>
+                <br>
+            <button id = '6' onClick="getInput(this.id)">&nbsp; </button>
+            <button id = "7" onClick="getInput(this.id)">&nbsp; </button>
+            <button id = "8" onClick="getInput(this.id)">&nbsp; </button>
+                <br>
+            <button onclick="reset()" style="width: 250px; font-size: 20px;" >Restart</button>
+        </div>
+        </div>
+        
+<!-- </div> -->
+    <br>
+    <script type="text/javascript">
+		var turn = "0";
+		var position = '';
+		input = ['','','','','','','','',''];
+        input1 =['','','','','','','','',''];
+		function getInput(id) 
+        {	
+            if (turn % 2 == '0') {
+            	var btn = document.getElementById(id);
+                btn.innerHTML = "0"; 
+                btn.disabled = true;
+            	turn ++;
+                input[id] = '0';	
+                debugger
+                won();
+             }
+             else
+             {
+                var btn = document.getElementById(id);
+                btn.innerHTML = "X"; 
+                btn.disabled = true;
+             	turn ++;
+             	// var position = document.getElementById(id);
+                input1[id] = '0';	
+                debugger
+                wons();
+
+             }
+              if (turn > 8 ) {
+                 document.getElementById('won').innerHTML = "GAME OVER ";
+                location.reload();
+             }	
+		}
+        function won()
+        {
+            debugger
+            if (input[0] == '0' && input[1] == '0' && input[2] == '0') 
+            {
+                document.getElementById('won').innerHTML = " 0 Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input[3] == '0' && input[4] == '0'  &&input[5] == '0')
+            {
+                document.getElementById('won').innerHTML = " 0 Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input[6] == '0'  &&input[7] == '0'  &&input[8] == '0')
+            {
+                document.getElementById('won').innerHTML = " 0 Won !! ";
+                setTimeout(function(){ location.reload();}, 2000); 
+                return true;
+            }
+            else if (input[0] == '0' && input[4] == '0' && input[8] == '0')
+            {
+                document.getElementById('won').innerHTML = " 0 Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input[2] == '0' && input[4] == '0'  &&input[6] == '0')
+            {
+                document.getElementById('won').innerHTML = " 0 Won !! ";
+                 setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input[0] == '0' && input[3] == '0'  &&input[6] == '0')
+            {
+                document.getElementById('won').innerHTML = " 0 Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input[1] == '0' && input[4] == '0'  &&input[7] == '0')
+            {
+                document.getElementById('won').innerHTML = " 0 Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input[2] == '0' && input[5] == '0'  &&input[8] == '0')
+            {
+                document.getElementById('won').innerHTML = " 0 Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else{
+            	// alert("F");
+            	return false;
+            }
+            debugger
+        }
+
+         function wons()
+        {
+            debugger
+            if (input1[0] == '0' && [1] == '0' && input1[2] == '0') 
+            {
+                document.getElementById('won').innerHTML = " X Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input1[3] == '0' && input1[4] == '0'  &&input1[5] == '0')
+            {
+                document.getElementById('won').innerHTML = " X Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input1[6] == '0'  &&input1[7] == '0'  &&input1[8] == '0')
+            {
+                document.getElementById('won').innerHTML = " X Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input1[0] == '0' && input1[4] == '0' && input1[8] == '0')
+            {
+                document.getElementById('won').innerHTML = " X Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input1[2] == '0' && input1[4] == '0'  &&input1[6] == '0')
+            {
+                document.getElementById('won').innerHTML = " X Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+             else if (input1[0] == '0' && input1[3] == '0'  &&input1[6] == '0')
+            {
+                document.getElementById('won').innerHTML = " X Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input1[1] == '0' && input1[4] == '0'  &&input1[7] == '0')
+            {
+                document.getElementById('won').innerHTML = " X Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else if (input1[2] == '0' && input1[5] == '0'  &&input1[8] == '0')
+            {
+                document.getElementById('won').innerHTML = " X Won !! ";
+                setTimeout(function(){ location.reload();}, 2000);
+                return true;
+            }
+            else{
+            	// alert("F");
+            	return false;
+            }
+            debugger
+        }
+
+        function reset(){
+             location.reload();
+        }
+	</script>
+</body>
+
+<footer>
+    <p>Made By Udit with Coffee </p>
+</footer>
+	
+</html>
