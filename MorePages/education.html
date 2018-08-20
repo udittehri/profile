@@ -1,5 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="http://iamudit.tk/">
+    <img src="../Images/icon.svg" alt="hii" width="30" height="30" alt="">
+  </a>
+  <a class="navbar-brand" href="http://iamudit.tk/">Udit Tehri </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://iamudit.tk/">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://iamudit.tk/MorePages/games.html">Games</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://iamudit.tk/cipherText/index.html">Cipher</a>
+      </li>
+      <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+    </ul>
+  </div>
+</nav>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +39,7 @@
   <script src="../js/education.js"></script>
   <title>Education. </title>
 </head>
+
 <body>
   <div class="container h-100 d-flex justify-content-center" onclick="next('next')">
     <div class="jumbotron my-auto">
@@ -17,9 +47,12 @@
     </div>
   </div>
   <div class="previous">
-      <label><label  onclick="next('back')" id="previoLine">&nbsp;&nbsp;&nbsp;&nbsp; Missed Previous ?</label>
-      <label style="float: left;"  onclick="changeUrl()" id="extraContent"> &nbsp;The Technological Institute of Textile and Science </label>
-      <a onclick="goIndex(1)" > <label style="float: right;">&nbsp;&nbsp;&nbsp;&nbsp;  Back  </label></a>
+    <label>
+      <label onclick="next('back')" id="previoLine">&nbsp;&nbsp;&nbsp;&nbsp; Missed Previous ?</label>
+      <label style="float: left;" onclick="changeUrl()" id="extraContent"> &nbsp;The Technological Institute of Textile and Science </label>
+      <a onclick="goIndex(1)">
+        <label style="float: right;">&nbsp;&nbsp;&nbsp;&nbsp; Back </label>
+      </a>
     </label>
   </div>
 </body>
