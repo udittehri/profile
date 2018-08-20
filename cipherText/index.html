@@ -17,29 +17,31 @@
 
 <body>
     <div class="mx-auto" style="width: auto;">
-        <h1> Cipher Your Text Here </h1>
+        <h1> (De)Cipher Your Text Here </h1>
     </div>
     <div class="jumbotron ">
         <span>
-            <input type="checkbox">
-            <label>Change to Cipher </label>
+            <input type="checkbox"  id="isChecked" onclick="checkBox(this)">
+            <label> Check if you want convert Cipher Text </label>
             <br>
         </span>
-        <label for="basic-url">Let's Cipherate Your Text.</label>
+        <label >Let's Cipherate Your Text.</label>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon3">Put your Text Here</span>
+                <span class="input-group-text" id="originalText">Put your Text Here</span>
             </div>
-            <input type="text" class="form-control" id="inputText" aria-describedby="basic-addon3" onchange="cipherateText(event)">
+            <input type="text" class="form-control" id="inputText" aria-describedby="basic-addon3" onkeyup="cipherateText(event)">
         </div>
         <hr>
         <div>
-            <label for="basic-url"></label>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon3">Your Ciphered Text</span>
+                    <span class="input-group-text" id="ChangedText">Your Ciphered Text</span>
                 </div>
                 <input type="text" class="form-control" id="cipherText" disabled aria-describedby="basic-addon3">
+                <div class="input-group-prepend">
+                        <span class="input-group-text" id="copyButton" onclick="copyPlease()" >Copy</span>
+                    </div>
             </div>
         </div>
     </div>
