@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cipherate</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="cipher.css">
+    <script src="cipher.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+
+<body>
+    <div class="mx-auto" style="width: auto;">
+        <h1> Cipher Your Text Here </h1>
+    </div>
+    <div class="jumbotron ">
+        <span>
+            <input type="checkbox">
+            <label>Change to Cipher </label>
+            <br>
+        </span>
+        <label for="basic-url">Let's Cipherate Your Text.</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">Put your Text Here</span>
+            </div>
+            <input type="text" class="form-control" id="inputText" aria-describedby="basic-addon3" onchange="cipherateText(event)">
+        </div>
+        <hr>
+        <div>
+            <label for="basic-url"></label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">Your Ciphered Text</span>
+                </div>
+                <input type="text" class="form-control" id="cipherText" disabled aria-describedby="basic-addon3">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

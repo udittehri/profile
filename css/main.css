@@ -5,3 +5,10 @@ html, body {
 .previous{
     text-align: center;
 }
+
+h1
+{
+    margin: 10px;
+    size: 20;
+    color: #2c2c2c;
+}
