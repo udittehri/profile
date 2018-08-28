@@ -17,7 +17,7 @@ function startActivity() {
         document.body.style.backgroundColor = item;
         document.getElementById("load").style.backgroundColor = item;
 
-        setTimeout(window.location.reload(true), 1000);
+        setTimeout(window.location.reload(true), 100);
     }
 }
 
