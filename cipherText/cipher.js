@@ -26,21 +26,20 @@ function copyPlease() {
     copyText.select();
     document.execCommand("copy");
     alert("Copied the text: " + copyText.value);
-    debugger
-    // var copyText = document.getElementById("cipherText");
-    // console.log(copyText);
-    // copyText.select();
-    // document.execCommand("copy");
-    // // document.getElementById("copyButton").value = "Copied";
 }
 
 function checkBox(eventCheckBox) {
     if (eventCheckBox.checked) {
+        cipherText
+        document.getElementById('cipherText').value = null;
+        document.getElementById('inputText').value = null;
         document.getElementById('originalText').textContent = "Put your Cipher Text Here";
         document.getElementById('ChangedText').textContent = "Your Original Text";
 
     }
     else {
+        document.getElementById('cipherText').value = null;
+        document.getElementById('inputText').value = null;
         document.getElementById('originalText').textContent = "Put your Text Here";
         document.getElementById('ChangedText').textContent = "Your Ciphered Text";
     }
